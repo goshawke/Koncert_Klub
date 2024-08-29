@@ -143,13 +143,13 @@ header li {
 }
 
 .table {
-    width: 98%;
+    width: 90%;
 
     /*variable*/
     min-width: 200px;
 
-    text-align: center;
-    padding: 0 10px 0 0;
+    text-align: left;
+    padding: 15px 0px 15px 15px;
     margin: 0;
     border-spacing: 1px;
 }
@@ -158,7 +158,7 @@ header li {
     color: yellowgreen;
 
     /*Variable*/
-    font-size: 1.5rem;
+    font-size: 1.75rem;
 }
 
 
@@ -170,9 +170,6 @@ header li {
     color: white;
     flex-direction: column;
     text-align: center;
-
-    /*Variable*/
-    font-size: 1rem;
 
     align-items: center;
     justify-content: center;
@@ -199,26 +196,30 @@ header li {
 }
 
 #past_shows table thead th:nth-child(1) , #upcoming_shows table thead th:nth-child(1) {
-    width: 35%;
+    width: 50%;
   }
   
 #past_shows table thead th:nth-child(2) , #upcoming_shows table thead th:nth-child(2) {
-    width: 35%;
+    width: 0%;
   }
   
 #past_shows table thead th:nth-child(3), #upcoming_shows table  thead th:nth-child(3) {
-    width: 25%;
+    width: 0%;
   }
   
 #past_shows table thead th:nth-child(4) #upcoming_shows table  thead th:nth-child(4) {
-    width: 10%;
+    width: 50%;
   }
 
 #past_shows table td, #upcoming_shows table td{
 
     /*Variable*/
-    font-size: 1rem;
+    font-size: 1.25rem;
     vertical-align: top;
+}
+
+.venue, .city{
+    display: none;
 }
 
 footer {
@@ -236,8 +237,30 @@ footer {
     bottom: 0px;
 }
 
+@media only screen and (min-width:500px)
+{
+    .feature h2{
+        /*Variable*/
+        font-size: 3.25rem;
+    }
 
-@media only screen and (min-width:730px)
+    .table-head{
+        /*Variable*/
+        font-size: 2.25rem;
+    }
+
+    #upcoming_shows table td, #past_shows table td{
+        /*Variable*/
+        font-size: 1.75rem;
+    }
+
+    #upcoming_shows h2, #past_shows h2{
+        /*Variable*/
+        font-size: 3.25rem;
+    }
+}
+
+@media only screen and (min-width:800px)
 {
 
     /*Variable*/
@@ -249,38 +272,30 @@ footer {
     header ul{
         visibility: visible;
     }
-
-    header h1 {
-        font-size: 3rem;
-    }
     
     header li {
         padding-left: 10px;
         font-size: 1.5rem;
     }
 
-    .feature h2{
-        /*Variable*/
-        font-size: 3rem;
+
+    #past_shows table thead th:nth-child(1) , #upcoming_shows table thead th:nth-child(1) {
+        width: 35%;
+    }
+    
+    #past_shows table thead th:nth-child(2) , #upcoming_shows table thead th:nth-child(2) {
+        width: 25%;
+    }
+    
+    #past_shows table thead th:nth-child(3), #upcoming_shows table  thead th:nth-child(3) {
+        width: 20%;
+    }
+    
+    #past_shows table thead th:nth-child(4) #upcoming_shows table  thead th:nth-child(4) {
+        width: 20%;
     }
 
-    .table-head{
-        /*Variable*/
-        font-size: 2rem;
+    .venue, .city{
+        display:table-cell;
     }
-
-    #upcoming_shows, #past_shows{
-        /*Variable*/
-        font-size: 2rem;
     }
-
-    #upcoming_shows table td, #past_shows table td{
-        /*Variable*/
-        font-size: 1.5rem;
-    }
-
-    #upcoming_shows h2, #past_shows h2{
-        /*Variable*/
-        font-size: 3rem;
-    }
-}
